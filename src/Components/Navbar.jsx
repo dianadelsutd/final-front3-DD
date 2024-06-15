@@ -6,7 +6,7 @@ import { routes } from './utils/routes';
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='nav'>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       <Link to={routes.inicio}>
         <h4>Home</h4>
