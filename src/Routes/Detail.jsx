@@ -23,16 +23,17 @@ const Detail = () => {
     <>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      <div>
-        {dentist && (
-          <>
-            <h1>hola</h1>
-
-            <h1>{dentist.name}</h1>
-            <h1>{dentist.email}</h1>
-            <h1>{dentist.phone}</h1>
-          </>
-        )}
+      <div className='card-contact-container'>
+        <div className='card-contact'>
+          {dentist && (
+            <>
+              <img src='../../public/images/doctor.jpg' alt='' />
+              <h1>{dentist.name}</h1>
+              <p>{dentist.email}</p>
+              <p>{dentist.phone}</p>
+            </>
+          )}
+        </div>
       </div>
     </>
   );

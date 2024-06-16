@@ -9,17 +9,19 @@ import Favs from './Routes/Favs';
 
 function App() {
   return (
-    <>
+    <div id='root'>
       <Navbar />
-      <Routes>
-        <Route path={routes.inicio} element={<Home />} />
-        <Route path={routes.contacto} element={<Contact />} />
-        <Route path={routes.dentista} element={<Detail />} />
-        {/* <Route path='/dentist/:id' element={<Detail />} /> */}
-        <Route path={routes.destacados} element={<Favs />} />
-        <Route path='*' element={<h1>Error 404 - Page not found</h1>} />
-      </Routes>
-    </>
+      <div className='main-content'>
+        <Routes>
+          <Route path={routes.inicio} element={<Home />} />
+          <Route path={routes.contacto} element={<Contact />} />
+          <Route path={routes.dentista} element={<Detail />} />
+          <Route path={routes.destacados} element={<Favs />} />
+          <Route path='*' element={<h1>Error 404 - Page not found</h1>} />
+        </Routes>
+      </div>
+      <Footer />
+    </div>
   );
 }
 
