@@ -57,9 +57,10 @@ const Form = () => {
           onChange={handleEmail}
         />
         <Button>Enviar</Button>
+
+        {show && <OkMsj nombre={cliente.nombre} />}
+        {error && <ErrorMsj />}
       </form>
-      {show && <OkMsj nombre={cliente.nombre} />}
-      {error && <ErrorMsj />}
     </>
   );
 };

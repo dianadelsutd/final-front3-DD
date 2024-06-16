@@ -15,6 +15,7 @@ function App() {
         <Route path={routes.inicio} element={<Home />} />
         <Route path={routes.contacto} element={<Contact />} />
         <Route path={routes.dentista} element={<Detail />} />
+        {/* <Route path='/dentist/:id' element={<Detail />} /> */}
         <Route path={routes.destacados} element={<Favs />} />
         <Route path='*' element={<h1>Error 404 - Page not found</h1>} />
       </Routes>
