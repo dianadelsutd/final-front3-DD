@@ -29,8 +29,9 @@ const Detail = () => {
             <>
               <img src='../../public/images/doctor.jpg' alt='' />
               <h1>{dentist.name}</h1>
-              <p>{dentist.email}</p>
-              <p>{dentist.phone}</p>
+              <p>Email: {dentist.email}</p>
+              <p>Tel: {dentist.phone}</p>
+              <p>Web: {dentist.website}</p>
             </>
           )}
         </div>

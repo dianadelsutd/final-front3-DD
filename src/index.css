@@ -44,7 +44,7 @@ nav{
 
 .nav-container{
   display:flex;
-  width:70%;
+  width:60%;
   justify-content: space-between; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
@@ -72,9 +72,15 @@ a{
   margin: 5px;
   cursor: pointer;
 }
+
+
 a:hover{
   color: rgb(136, 136, 136);
 } 
+
+
+
+
 
 footer {
   display:flex;
@@ -90,7 +96,7 @@ footer {
   text-align: center;
   position: relative;
   bottom: 0;
-  width: 70%;
+  width: 60%;
   height: 90px;
   justify-self: center;
   /* margin-top: 2rem; */
@@ -128,9 +134,18 @@ footer > p{
 .social-icons {
   display: flex;
   justify-content: flex-end;
-  width: 38px;
   align-self: center;
-  gap: 1rem;
+  align-items: center; 
+  
+}
+
+
+.social-icons > a{
+  display: flex;
+  justify-content: flex-end;
+  width: 40px;
+  align-self: center;
+
 }
 
 form{
@@ -226,7 +241,7 @@ img {
   justify-self: center;
   justify-content: space-between;
   gap: 1rem;
-  width:70%;
+  width:60%;
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;

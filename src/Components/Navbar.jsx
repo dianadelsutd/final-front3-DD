@@ -9,9 +9,11 @@ const Navbar = () => {
     <nav className='nav'>
       <div className='nav-container'>
         <div class='logo'>
-          {' '}
-          <span style={{ fontWeight: 'bold', color: '#334e6c' }}>D</span>H
-          Odonto{' '}
+          <Link to={routes.inicio} className='logo-hover'>
+            {' '}
+            <span style={{ fontWeight: 'bold', color: '#334e6c' }}>D</span>H
+            Odonto{' '}
+          </Link>
         </div>
 
         <div className='nav-content'>

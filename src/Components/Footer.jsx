@@ -10,10 +10,18 @@ const Footer = () => {
         </div>
 
         <div className='social-icons'>
-          <img src='../../public/images/ico-facebook.png' alt='' />
-          <img src='../../public/images/ico-instagram.png' alt='' />
-          <img src='../../public/images/ico-tiktok.png' alt='' />
-          <img src='../../public/images/ico-whatsapp.png' alt='' />
+          <a href='https://www.facebook.com/DigitalHouseUruguay'>
+            <img src='../../public/images/ico-facebook.png' alt='Facebook' />
+          </a>
+          <a href='https://www.instagram.com/_digitalhouse/?hl=es'>
+            <img src='../../public/images/ico-instagram.png' alt='' />
+          </a>
+          <a href='https://www.tiktok.com/discover/digital-house'>
+            <img src='../../public/images/ico-tiktok.png' alt='' />
+          </a>
+          <a href='https://www.whatsapp.com/?lang=es_LA'>
+            <img src='../../public/images/ico-whatsapp.png' alt='' />
+          </a>
         </div>
       </div>
     </footer>
