@@ -5,6 +5,7 @@ import axios from 'axios';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
+  const [fav, setFav] = useState([]);
   const [dentists, setDentists] = useState([]);
   const url = 'https://jsonplaceholder.typicode.com/users';
 
@@ -14,7 +15,7 @@ const Home = () => {
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
-  console.log(dentists);
+  //console.log(dentists);
 
   return (
     <main className=''>
@@ -27,6 +28,7 @@ const Home = () => {
             dentista={dentist}
             name={dentist.name}
             username={dentist.username}
+            setFav={setFav}
           />
         ))}
       </div>

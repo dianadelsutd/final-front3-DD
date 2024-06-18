@@ -2,9 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { routes } from './utils/routes';
 
-const Card = ({ dentista, name, username }) => {
+const Card = ({ dentista, name, username, setFav }) => {
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
+    setFav((prevState) => {
+      const newFav = [...prevState, dentista];
+      localStorage.setItem('fav', JSON.stringify(newFav));
+      //console.log('Dentista agregado a favoritos:', dentista);
+      console.log('Array de favoritos actualizado:', newFav);
+      return newFav;
+    });
   };
 
   return (
