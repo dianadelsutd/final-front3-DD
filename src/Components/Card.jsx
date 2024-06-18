@@ -6,11 +6,19 @@ const Card = ({ dentista, name, username, setFav }) => {
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
     setFav((prevState) => {
-      const newFav = [...prevState, dentista];
-      localStorage.setItem('fav', JSON.stringify(newFav));
-      //console.log('Dentista agregado a favoritos:', dentista);
-      console.log('Array de favoritos actualizado:', newFav);
-      return newFav;
+      const isAlreadyFav = prevState.some(
+        (favDentist) => favDentist.id === dentista.id
+      );
+      if (!isAlreadyFav) {
+        const newFav = [...prevState, dentista];
+        localStorage.setItem('fav', JSON.stringify(newFav));
+        console.log('Dentista agregado a favoritos:', dentista);
+        console.log('Array de favoritos actualizado:', newFav);
+        return newFav;
+      } else {
+        console.log('El dentista ya está en favoritos:', dentista);
+        return prevState; // No agregar si ya está en favoritos
+      }
     });
   };
 

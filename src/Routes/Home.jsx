@@ -10,12 +10,24 @@ const Home = () => {
   const url = 'https://jsonplaceholder.typicode.com/users';
 
   useEffect(() => {
+    // Cargar los favoritos desde localStorage cuando el componente se monta (sacado de int)
+    const storedFavs = localStorage.getItem('fav');
+    if (storedFavs) {
+      setFav(JSON.parse(storedFavs));
+    }
+
+    //esto ya estaba
     axios(url)
       .then((res) => setDentists(res.data))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
   //console.log(dentists);
+
+  useEffect(() => {
+    // Guardar los favoritos en localStorage cada vez que fav cambia (sacado de int)
+    localStorage.setItem('fav', JSON.stringify(fav));
+  }, [fav]);
 
   return (
     <main className=''>
