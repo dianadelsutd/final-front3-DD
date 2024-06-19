@@ -59,9 +59,8 @@ nav{
   display:flex;
   flex-direction: row;
   justify-content: space-around;
-  /* margin-left: 4rem;
-   */
    gap: 3rem;
+   align-items: center;
 
 }
 
@@ -108,10 +107,6 @@ footer {
   /* margin-top: 2rem; */
 }
 
-.logo-container img {
-  max-height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-  width: 40%;
-}
 
 footer > img{
   margin:0;
@@ -133,14 +128,15 @@ footer > p{
 .logo-container > img{
   display:flex; 
   align-self: center;
-  margin-top:3%;
+
+  max-height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+  width: 40%;
 
 }
 
 .social-icons {
   display: flex;
-  justify-content: flex-end;
-  align-self: center;
+  justify-content: center;
   align-items: center; 
   
 }
@@ -148,11 +144,18 @@ footer > p{
 
 .social-icons > a{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: flex-end;
   width: 40px;
-  align-self: center;
-
+  height: fit-content;
+ 
 }
+
+.social-icons > a > img{
+  display:flex;
+height: fit-content;
+}
+
 
 form{
   display: flex;
@@ -235,7 +238,7 @@ button:hover {
 
 img {
   width:100%;
-  margin-bottom: 1rem;
+  
 }
 
 .card:hover{
@@ -253,6 +256,12 @@ img {
   margin: 0 auto;
   margin-top:20px;
   margin-bottom:20px;
+}
+
+.card-grid p{
+  justify-self: center;
+  text-align: center;
+  width: 100%;
 }
 
 table {
@@ -281,3 +290,67 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+/* boton theme */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* fin boton theme */

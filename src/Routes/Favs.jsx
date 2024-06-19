@@ -23,9 +23,11 @@ const Favs = () => {
     <>
       <div className='contenedor-h1'>
         <h1>Dentistas Favoritos</h1>
-        <button onClick={clearFavs} className='button'>
-          Borrar todos los favoritos
-        </button>
+        {favList.length > 0 && (
+          <button onClick={clearFavs} className='button'>
+            Borrar todos los favoritos
+          </button>
+        )}
       </div>
       <div className='card-grid'>
         {/* este componente debe consumir los destacados del localStorage */}
