@@ -6,21 +6,20 @@ import Contact from './Routes/Contact';
 import Home from './Routes/Home';
 import Detail from './Routes/Detail';
 import Favs from './Routes/Favs';
+import Layout from './Layout/Layout';
 
 function App() {
   return (
     <div id='root'>
-      <Navbar />
-      <div className='main-content'>
-        <Routes>
+      <Routes>
+        <Route path={routes.inicio} element={<Layout />}>
           <Route path={routes.inicio} element={<Home />} />
           <Route path={routes.contacto} element={<Contact />} />
           <Route path={routes.dentista} element={<Detail />} />
           <Route path={routes.destacados} element={<Favs />} />
           <Route path='*' element={<h1>Error 404 - Page not found</h1>} />
-        </Routes>
-      </div>
-      <Footer />
+        </Route>
+      </Routes>
     </div>
   );
 }

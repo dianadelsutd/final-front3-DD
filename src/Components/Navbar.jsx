@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className='nav'>
       <div className='nav-container'>
-        <div class='logo'>
+        <div className='logo'>
           <Link to={routes.inicio} className='logo-hover'>
             {' '}
             <span style={{ fontWeight: 'bold', color: '#334e6c' }}>D</span>H
