@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { routes } from './utils/routes';
-import ButtonTheme from './ButtonTheme';
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { useThemeContext } from '../Context/ThemeContext';
 
 const Navbar = () => {
+  const { state, dispatch } = useThemeContext();
+
+  const toggleTheme = () => {
+    dispatch({ type: 'TOGGLE_THEME' });
+  };
+
   return (
-    <nav className='nav'>
+    <nav className={`nav ${state.theme}`}>
       <div className='nav-container'>
         <div className='logo'>
           <Link to={routes.inicio} className='logo-hover'>
@@ -18,7 +22,6 @@ const Navbar = () => {
         </div>
 
         <div className='nav-content'>
-          {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
           <Link to={routes.inicio}>
             <h4>Home</h4>
           </Link>
@@ -28,10 +31,8 @@ const Navbar = () => {
           <Link to={routes.destacados}>
             <h4>Favoritos</h4>
           </Link>
-          {/* <button>Change theme</button> */}
-          <ButtonTheme />
+          <button onClick={toggleTheme}>Change theme</button>
         </div>
-        {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       </div>
     </nav>
   );

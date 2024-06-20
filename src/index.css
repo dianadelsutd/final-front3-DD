@@ -50,7 +50,6 @@ nav{
   display: flex;
   width: 100%;
   justify-content: space-around;
-  background-color: rgb(171, 206, 222);
   align-items: center;
 }
 
@@ -96,7 +95,6 @@ a:hover{
 footer {
   display:flex;
   width: 100%;
-  background-color: rgb(171, 206, 222);
   justify-content: center;
   flex-shrink: 0;
 }
@@ -363,3 +361,53 @@ input:checked + .slider:before {
 
 
 /* fin boton theme */
+
+/* LIGHT O DARK THEME */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+main.dark {
+  background-color: black;
+  color: white;
+}
+
+.nav.light {
+  background-color: rgb(171, 206, 222);
+}
+
+.nav.dark {
+  
+  background-color:  #8e8e8e;
+  color: white;
+  
+}
+
+.main-content.light {
+  background-color: #f0f0f0;
+}
+
+.main-content.dark {
+  background-color: #525154;
+}
+
+.card.dark{
+  color: white;
+}
+
+.footer.dark{
+  background-color:  #8e8e8e;
+  color: white;
+}
+
+.footer.light{
+  background-color: rgb(171, 206, 222);
+}
+
+/* FIN LIGHT O DARK THEME */

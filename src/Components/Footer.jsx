@@ -1,8 +1,10 @@
 import React from 'react';
+import { useThemeContext } from '../Context/ThemeContext';
 
 const Footer = () => {
+  const { state, dispatch } = useThemeContext();
   return (
-    <footer>
+    <footer className={`footer ${state.theme}`}>
       <div className='footer-container'>
         <div className='logo-container'>
           <p>Powered by</p>
