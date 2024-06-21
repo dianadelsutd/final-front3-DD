@@ -16,9 +16,11 @@ const Card = ({ dentista, name, username, setFav }) => {
         localStorage.setItem('fav', JSON.stringify(newFav));
         console.log('Dentista agregado a favoritos:', dentista);
         console.log('Array de favoritos actualizado:', newFav);
+        alert(`El dentista ${dentista.name} fue agregado a favoritos`);
         return newFav;
       } else {
         console.log('El dentista ya está en favoritos:', dentista);
+        alert(`El dentista ${dentista.name} ya esta en favoritos`);
         return prevState; // No agregar si ya está en favoritos
       }
     });

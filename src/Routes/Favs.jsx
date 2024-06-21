@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Components/Card';
+import { useThemeContext } from '../Context/ThemeContext';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
+  const { state } = useThemeContext();
   const [favList, setFavList] = useState([]);
 
   useEffect(() => {
@@ -39,7 +41,7 @@ const Favs = () => {
               dentista={dentista}
               name={dentista.name}
               username={dentista.username}
-              setFav={() => {}}
+              isFav={true} // Marcar como favorito en el componente Card
             />
           ))
         ) : (
