@@ -43,7 +43,7 @@ code {
 }
 
 .favButton:active {
-  background-color: blue; /* Cambia esto al color que prefieras para cuando está en favoritos */
+  background-color: rgb(21, 21, 243); /* Cambia esto al color que prefieras para cuando está en favoritos */
 }
 
 h1{
