@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { routes } from './utils/routes';
 import { useThemeContext } from '../Context/ThemeContext';
 
 const Card = ({ dentista, name, username, setFav }) => {
